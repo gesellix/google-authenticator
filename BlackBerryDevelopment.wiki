@@ -1,0 +1,43 @@
+#summary How to build and deploy Google Authenticator for BlackBerry
+#labels BlackBerry
+
+== Build Instructions ==
+  * Download and install [http://ant.apache.org/bindownload.cgi Apache Ant]
+  * Download and install [http://antenna.sourceforge.net/ Antenna]
+  * Download and install [http://bb-ant-tools.sourceforge.net/ bb-ant-tools]
+  * Download and install [http://na.blackberry.com/eng/developers/javaappdev/javaeclipseplug.jsp Eclipse with BlackBerry plug-ins] or the [http://na.blackberry.com/eng/developers/javaappdev/javadevenv.jsp BlackBerry JDE]
+  * `hg clone https://google-authenticator.googlecode.com/hg/ google-authenticator`
+  * `cd mobile/blackberry`
+  * Create file `local.properties` in project root (see example below)
+  * Run `ant release`
+
+== Signing Instructions ==
+  * Before building, copy `sigtool.csk` and `sigtool.db` to the `bin/` directory of the SDK identified by `jdehome` in `local.properties`
+  * Run `ant release`
+  * Enter password when prompted
+
+== Deployment Instructions ==
+  * Download and install [http://www.activestate.com/activepython/ ActivePython]
+  * Download and install [http://code.google.com/appengine/downloads.html#Google_App_Engine_SDK_for_Python Google App Engine SDK for Python]
+  * Run `ant release`
+  * `appcfg.py update release\<version>`
+
+== Tips ==
+  * If you get a `MissingResourceException` in the simulator, try running `clean.bat` in the `simulator` directory (for example, `C:\Program Files\Eclipse\plugins\net.rim.eide.componentpack4.5.0_4.5.0.16\components\simulator`)
+  * To manually regenerate `com.google.authenticator.blackberry.resource.AuthenticatorResource` in Eclipse, use the _Validate_ button in the resource editor.
+  * Do not change the COD file name; the BlackBerry platform uses this to identify an application and if a user upgrades to a COD with a different name they will end up with multiple installations.
+
+== Sample `local.properties` File ==
+
+{{{
+java.home=c:/Program Files/Java/jdk1.6.0_18
+jdehome=C:/Program Files/Eclipse/plugins/net.rim.eide.componentpack4.2.1_4.2.1.17/components
+jdehome42=C:/Program Files/Eclipse/plugins/net.rim.eide.componentpack4.2.1_4.2.1.17/components
+jdehome43=C:/Program Files/Eclipse/plugins/net.rim.eide.componentpack4.3.0_4.3.0.16/components
+jdehome45=C:/Program Files/Eclipse/plugins/net.rim.eide.componentpack4.5.0_4.5.0.16/components
+jdehome46=C:/Program Files/Eclipse/plugins/net.rim.eide.componentpack4.6.0_4.6.0.19/components
+jdehome47=C:/Program Files/Eclipse/plugins/net.rim.eide.componentpack4.7.0_4.7.0.46/components
+appengine.application=myauthenticator
+appengine.version=1
+appengine.url=http://myauthenticator.appspot.com/
+}}}
