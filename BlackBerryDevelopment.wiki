@@ -1,5 +1,5 @@
 #summary How to build and deploy Google Authenticator for BlackBerry
-#labels BlackBerry
+#labels BlackBerry,Featured,Phase-Implementation
 
 == Build Instructions ==
   * Download and install [http://ant.apache.org/bindownload.cgi Apache Ant]
