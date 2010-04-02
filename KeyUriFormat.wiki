@@ -13,7 +13,7 @@ otpauth://TYPE/LABEL?PARAMETERS
 
 Provision a TOTP key for user "alice@google.com":
 {{{ 
-otpauth://alice@google.com?secret=JBSWY3DPEHPK3PXP
+otpauth://totp/alice@google.com?secret=JBSWY3DPEHPK3PXP
 }}}
 
 This Base32 encoded key "JBSWY3DPEHPK3PXP" has the value:
