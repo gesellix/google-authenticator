@@ -25,7 +25,7 @@
 == Tips ==
   * If you get a `MissingResourceException` in the simulator, try running `clean.bat` in the `simulator` directory (for example, `C:\Program Files\Eclipse\plugins\net.rim.eide.componentpack4.5.0_4.5.0.16\components\simulator`)
   * To manually regenerate `com.google.authenticator.blackberry.resource.AuthenticatorResource` in Eclipse, use the _Validate_ button in the resource editor.
-  * Do not change the COD file name; the BlackBerry platform uses this to identify an application and if a user upgrades to a COD with a different name they will end up with multiple installations.
+  * Do not change the COD file name; the !BlackBerry platform uses this to identify an application and if a user upgrades to a COD with a different name they will end up with multiple installations.
 
 == Sample `local.properties` File ==
 
