@@ -1,4 +1,5 @@
 #summary Updated Mercurial Version
+#labels Deprecated
 
 = Mercurial =
 
