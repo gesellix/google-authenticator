@@ -4,7 +4,7 @@ As more websites add support for 2-Step Verification using the TOTP standard, th
 
 If that user has enabled two step verification for all websites and intends to add all of the accounts to the same code generation app, this may result (depending on how the code generating application handles conflicting accounts internally) in accounts that are indistinguishable to the user in the application UI, or worse yet, in a situation where one account overwrites another, effectively locking the user out of the overridden account.
 
-= Recommendation for websites supporting the TOTP/HOTP standard = 
+== Recommendation for websites supporting the TOTP/HOTP standard == 
 
 When you encode a URI in a QR code you should make sure you add the “Issuer Parameter” (described in the URI format page) to allow the code generating app to programmatically distinguish the account from others using the same username.
 
@@ -19,7 +19,7 @@ otpauth://totp/Company:joe_example@gmail.com?secret=[...]&issuer=Company
 Note:  The label prefix will ensure that the account distinguished in any version of Google Authenticator.  Later in Summer 2013,  Google Authenticator will provide a UI to make use the parameters to classify accounts with different users.  
 
 
-= Recommendation for code generation app developers = 
+== Recommendation for code generation app developers == 
 
 If you are developing a code generating app that uses the TOTP standard, we recommend the following:
 
