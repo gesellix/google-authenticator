@@ -1,17 +1,3 @@
-#summary One-sentence summary of this page.
-
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
-
 
 = How to deal with conflicting accounts = 
 
@@ -47,5 +33,3 @@ otpauth://totp/Company:joe_example@gmail.com?secret=[...]&issuer=Company
 consider adding an account with label  “joe_example@gmail.com” and brand “Company”.
 
   * The internal logic your app needs to avoid overriding existing entries with the same username that belong -or might belong- to completely different websites.
-
-
