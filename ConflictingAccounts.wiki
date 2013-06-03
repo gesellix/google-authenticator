@@ -1,3 +1,4 @@
+#labels URI,Conflict,issuer
 = How to deal with conflicting accounts = 
 
 As more websites add support for 2-Step Verification using the TOTP standard, there is an increased risk that a user will have identical profiles for two or more different websites.   For instance, user "joe_example@gmail.com" may have the same username for many websites (including Google, Facebook, Dropbox, and Live.com).  
