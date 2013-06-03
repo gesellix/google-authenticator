@@ -32,6 +32,6 @@ For instance if you app reads a URI of the form,
 otpauth://totp/Company:joe_example@gmail.com?secret=[...]&issuer=Company
 }}}
 
-consider adding an account with label  “joe_example@gmail.com” and brand “Company”.
+consider surfacing the account in the UI using the label  “joe_example@gmail.com” and brand “Company”.
 
   * The internal logic your app needs to avoid overriding existing entries with the same username that belong -or might belong- to completely different websites.
