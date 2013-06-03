@@ -1,6 +1,6 @@
 = How to deal with conflicting accounts = 
 
-As more websites add support for 2-Step Verification using the TOTP standard, there is an increased risk that a user will have identical profiles for two or more different websites.   For instance, user "joe_example@gmail.com" may have the same username for many websites outside of Google (including Facebook, Dropbox, and Live.com).  
+As more websites add support for 2-Step Verification using the TOTP standard, there is an increased risk that a user will have identical profiles for two or more different websites.   For instance, user "joe_example@gmail.com" may have the same username for many websites (including Google, Facebook, Dropbox, and Live.com).  
 
 If that user has enabled two step verification for all websites and intends to add all of the accounts to the same code generation app, this may result (depending on how the code generating application handles conflicting accounts internally) in accounts that are indistinguishable to the user in the application UI, or worse yet, in a situation where one account overwrites another, effectively locking the user out of the overridden account.
 
