@@ -6,7 +6,7 @@ If that user has enabled two step verification for all websites and intends to a
 
 == Recommendation for websites supporting the TOTP/HOTP standard == 
 
-When you encode a URI in a QR code you should make sure you add the “Issuer Parameter” (described in the URI format page) to allow the code generating app to programmatically distinguish the account from others using the same username.
+When you encode a URI in a QR code you should make sure you add the “Issuer Parameter” (described in the [https://code.google.com/p/google-authenticator/wiki/KeyUriFormat URI format page]) to allow the code generating app to programmatically distinguish the account from others using the same username.
 
 Moreover, for backwards compatibility with older versions of code generating apps, we recommend prepending the issuer name to the account label, followed by colon (:).  By adding this prefix, you will be preventing code generation applications that do not read the “issuer” parameters from overwriting your entry.  You will also make it easier to the end user to tell which code generator goes with your site. 
 
