@@ -33,7 +33,7 @@ The label is used to identify which account a key is associated with. It contain
 label = accountname / issuer (“:” / “%3A”) *”%20” accountname
 }}}
 
-Valid values might include "Example:alice@gmail.com", "SuperWebService:Alice%20McKenzie" or “Big%20Corporation%3A%20alice@bigco.com.
+Valid values might include "Example:alice@gmail.com", "Provider1Alice%20McKenzie" or “Big%20Corporation%3A%20alice@bigco.com.
 
 We recommend using *both* an issuer label prefix and an issuer parameter, described below.
 
@@ -48,7 +48,7 @@ REQUIRED: The *secret* parameter is an arbitrary key value encoded in Base32 acc
 STRONGLY RECOMMENDED: The *issuer* parameter is a string value indicating the provider or service this account is associated with, URL-encoded according to [http://tools.ietf.org/html/rfc3986 RFC 3986].
 If the issuer parameter is absent, issuer information may be taken from the issuer prefix of the label. If both issuer parameter and issuer label prefix are present, they should be equal.
 
-Valid values corresponding to the label prefix examples above would be: issuer=Example, issuer=SuperWebService, and issuer=Big%20Corporation.
+Valid values corresponding to the label prefix examples above would be: issuer=Example, issuer=Provider1, and issuer=Big%20Corporation.
 
 Older Google Authenticator implementations ignore the issuer parameter and rely upon the issuer label prefix to disambiguate accounts. Newer implementations will use the issuer parameter for internal disambiguation, it will not be displayed to the user. We recommend using both issuer label prefix and issuer parameter together to safely support both old and new Google Authenticator versions.
 
